@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(48, 32, 32, 0.75), rgba(0, 0, 0, 0.75)), url('chemistry.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.ptbg {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(48, 32, 32, 0.5), rgba(0, 0, 0, 0.2)), url('pattern.png');
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: repeat-y; 
+    overflow: hidden;
+}
+
+
+#active /*lagay nyo to sa current page sa navbar ex. home*/
+{
+    color:white;
+	text-decoration:none;
+    padding: 10px;
+    border-radius: 10px;
+	background-color:#d7182a;
+}
+
+.navbar {
+    width: 100%; 
+    margin: auto;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(128, 0, 0, 0.75), rgba(64, 0, 0, 0.1));
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 25px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.logotext {
+    line-height: 1.4;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.logotext div {
+    font-size: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 18px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #d7182a;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+}
+
+.main h1 {
+    font-size: 70px;
+    margin: 60px 30px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main p {
+    margin: 10px 30px;
+    font-weight: 100;
+    line-height: 40px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+    width: 170px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 30px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: 2px solid #d7182a;
+    font-size: 20px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #d7182a;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.separator {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(48, 32, 32, 0.75), rgba(240, 240, 240, 1)); /* Customize colors */
+}
+
+/*about page*/
+#walter {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(48, 32, 32, 0.75), rgba(0, 0, 0, 0.75)), url('walter.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.about {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+/*MEMBERS PAGE BRO MEMBERS PAGE TO PRE AYOS MEMBERS PAGE TO OK*/
+.photo-frame {
+    width: 250px;
+    height: 320px;
+    background: #ffffff;
+    border-bottom-width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family:Helvetica;
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+.caption div {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.headermembers {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: azure;
+    padding: 30px;
+    text-align: center;
+}
+.photo-frame-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px; 
+    row-gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#joval{
+    background: url('members/joval.jpg') no-repeat center;
+    background-size: cover;
+    transition: 2s ease-in;
+}
+#dayag{
+    background: url('members/dayag.jpg') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#insipido{
+    background: url('members/elly.png') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#escueta{
+    background: url('members/marg.jpg') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#jolnaniro{
+    background: url('members/lebron.png') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#lagumbay{
+    background: url('members/mari.png') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#bajo{
+    background: url('members/bajo.jpg') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+#quidip{
+    background: url('members/cinn.jpg') no-repeat center;
+    background-size: cover;
+    transition: 1s ease;
+}
+
+/*hovers sa ota*/
+#jolnaniro:hover {
+    background: url('members/king.png') no-repeat center;
+    background-size: cover;
+}
+
+#joval:hover{
+    background: url('members/jaredd.png') no-repeat center;
+    background-size: cover;
+}
+
+#lagumbay:hover{
+    background: url('members/latest\(1\).png') no-repeat center;
+    background-size: cover;
+}
+
+#escueta:hover{
+    background: url('members/ferrari.png') no-repeat center;
+    background-size: cover;
+}
+
+#insipido:hover{
+    background: url('members/melody.png') no-repeat center;
+    background-size: cover;
+}
+
+#quidip:hover{
+    background: url('members/redbull.png') no-repeat center;
+    background-size: cover;
+}
+
+#dayag:hover{
+    background: url('members/Cinnamoroll.png') no-repeat center;
+    background-size: cover;
+}
+
+#bajo:hover{
+    background: url('members/rilakkuma.gif') no-repeat center;
+    background-size: cover;
+}
+
+
+/*act page*/
+.contentact h1{
+    font-size: 2.25rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    margin: 20px;
+}
+.image-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-item {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.image-item .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(80%) blur(10px);
+  transition: filter 0.3s ease;
+}
+
+.image-item:nth-child(1) .image-background {
+  background-image: url('pt/q1pt1a.jpg');
+}
+.image-item:nth-child(2) .image-background {
+  background-image: url('pt/balancing.jpg');
+}
+.image-item:nth-child(3) .image-background {
+  background-image: url('pt/q2pt1a.jpg');
+}
+
+/* Overlay content */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  visibility: visible;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+}
+
+.image-item:hover .overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.image-item:hover .image-background {
+  filter: grayscale(0%) blur(0);
+}
+
+/*pt*/
+.ptimgcont {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Ensures the container matches the image height */
+    overflow: hidden;
+}
+
+.big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ptimgcont .ptoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0 0 10px rgb(128, 128, 128); 
+}
+
+.ptimgcont .ptoverlay p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.pt1q1text{
+    margin: 0 20%;
+    padding: 2%;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    background:#88110869;
+    border:5px double rgba(155, 0, 0, 0.699);
+    border-top: 0px;
+}
+
+.pt1q1text h1 {
+    font-size: 250%;
+    color: #FFD700;
+    line-height: 1.5;
+}
+
+.pt1q1text p {
+    font-size: 150%;
+    line-height: 2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pt1q1text h2 {
+    font-size: 100%;
+    text-align: center;
+    color: #90ffff;
+}
+
+.imgcontpt1q1 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.imgcontpt1q1 img {
+    height: 360px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 4px ridge rgba(128, 0, 0, 0.75);
+    border-radius: 30px;
+}
+
+#toobig img{
+    height: 250px;
+}
+
+.pt1q1text li {
+    font-size: 150%;
+    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ccffff;
+}
+
+.pt1q1text ul {
+    padding-left: 30px;
+    list-style-type:square;
+    text-align: left;
+}
+
+.pt1q1text b {
+    color: #ffbb44;
+}
+
+.pt1q1text a:hover {
+    color: #ffbb44;
+    transition: 0.8s ease;
+}
+
+.chromapic {
+    height: 440px;
+    width: 500px;
+    float: right;
+    object-fit: cover;
+    border: 4px ridge rgba(128, 0, 0, 0.75);
+    border-radius: 30px;
+    margin-left: 20px;
+}
